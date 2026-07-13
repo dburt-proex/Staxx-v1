@@ -1,0 +1,20 @@
+{
+  "product": "Foundry Learning OS",
+  "status": "passed",
+  "quality_gates": {
+    "lint": {"status": "passed", "warnings": 0, "errors": 0},
+    "production_build": {"status": "passed"},
+    "browser_qa": {"status": "passed", "runtime_errors": 0, "screenshots": 12},
+    "course_modules": {"status": "passed", "count": 14},
+    "lecture_videos_complete_distribution": {"status": "passed", "count": 14},
+    "github_source_hydration": {"status": "passed", "hydrated_files": 57},
+    "generated_video_download": {"status": "passed"},
+    "obsidian_vault_export": {"status": "passed"},
+    "archive_integrity": {"status": "passed", "packages": 3}
+  },
+  "integration_state": {
+    "notion": "workspace and databases provisioned",
+    "github": "source, connection contracts, and deployment workflow versioned",
+    "obsidian": "working local vault export"
+  }
+}
