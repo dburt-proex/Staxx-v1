@@ -1,0 +1,15 @@
+{
+  "provider": "notion",
+  "workspace": "HOME",
+  "root_page": {
+    "id": "39ce941d-b3bc-8116-b306-ed094bdc4b25",
+    "url": "https://app.notion.com/p/39ce941db3bc8116b306ed094bdc4b25"
+  },
+  "data_sources": {
+    "course_modules": "collection://0c89c91c-9530-4223-88a2-63b4f7074fa1",
+    "learning_artifacts": "collection://d1845266-f98c-462a-ad8b-313af4a692cc",
+    "mastery_reviews": "collection://2ab6c262-8ce9-4f2a-893d-95656b347abe"
+  },
+  "mode": "governed-server-adapter",
+  "browser_secrets": false
+}
