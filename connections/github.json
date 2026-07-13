@@ -1,0 +1,9 @@
+{
+  "provider": "github",
+  "repository": "dburt-proex/Staxx-v1",
+  "url": "https://github.com/dburt-proex/Staxx-v1",
+  "branch": "main",
+  "source_mode": "self-hydrating-versioned-bundle",
+  "deployment_workflow": ".github/workflows/deploy-pages.yml",
+  "media_policy": "full MP4 library ships in the complete distribution, not the Git repository"
+}
