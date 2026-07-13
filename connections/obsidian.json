@@ -1,0 +1,23 @@
+{
+  "provider": "obsidian",
+  "mode": "portable-vault-export",
+  "format": "zip",
+  "folders": [
+    "00 Dashboard",
+    "01 Course Modules",
+    "02 Learning Artifacts",
+    "03 Mastery Reviews",
+    "04 Decision Records",
+    "05 System State"
+  ],
+  "includes": [
+    "Markdown frontmatter",
+    "module notes",
+    "generated decks",
+    "flashcards",
+    "podcast scripts",
+    "video manifests",
+    "decision records",
+    "application state"
+  ]
+}
