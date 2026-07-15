@@ -20,18 +20,36 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Hydrate versioned source bundle
-        run: node hydrate-source.mjs
+
+      - name: Restore application source automatically
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f hydrate-source.mjs || { echo "Missing hydrate-source.mjs"; exit 1; }
+          test -f foundry-source-bundle.json.gz.b64 || { echo "Missing source bundle"; exit 1; }
+          node hydrate-source.mjs
+          test -f package.json || { echo "Source restore did not create package.json"; exit 1; }
+          test -f package-lock.json || { echo "Source restore did not create package-lock.json"; exit 1; }
+          echo "Application source restored successfully."
+
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: npm
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run build
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
